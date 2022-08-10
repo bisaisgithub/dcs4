@@ -17,7 +17,7 @@ const CalimlimHomeNavbar = () => {
 
   return ( 
     <nav className={styles.nav_home}>
-      <Link href={'#'} passHref><a className={styles.company}>Calimlim Dental Clinic</a></Link>
+      <Link href={'/calimlim/'} passHref><a className={styles.company}>Calimlim Dental Clinic</a></Link>
       <ul className={navActive}>
         <li  onClick={navToggle} className={styles.nav_home_li}>
             <Link className={styles.nav_home_a} href={'/calimlim'}>Home</Link>
