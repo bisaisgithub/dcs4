@@ -2,7 +2,7 @@ import axios from "axios";
 import { useState } from "react";
 import { useRouter } from "next/router";
 import Link from 'next/link';
-import CalimlimHomeNavbar from "../../component/calimlim/CalimlimHomeNavbar";
+import CalimlimHomeNavbar from "../../../component/calimlim/CalimlimHomeNavbar";
 
 const Login = () => {
   const router = useRouter();
