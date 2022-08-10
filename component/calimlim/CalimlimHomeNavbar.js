@@ -1,8 +1,10 @@
 import Link from "next/link";
 import {useState} from 'react';
+import styles from '../../styles/NavbarHome.module.css';
 
 const CalimlimHomeNavbar = () => {
   const [navActive, setNavActive] = useState(styles.nav_home_menu);
+  const [toggleIcon, setToggleIcon] = useState(`${styles.nav_home_toggler}`);
   const navToggle = ()=>{
     navActive === styles.nav_home_menu ? 
     setNavActive(`${styles.nav_home_menu} ${styles.nav_home_active}`) :
@@ -12,28 +14,22 @@ const CalimlimHomeNavbar = () => {
     setToggleIcon(`${styles.nav_home_toggler } ${styles.toggle}`) :
     setToggleIcon(styles.nav_home_toggler )
   }
-  const [toggleIcon, setToggleIcon] = useState(`${styles.nav_home_toggler}`);
+
   return ( 
     <nav className={styles.nav_home}>
-      <Link href={'#'} passHref>
-        <a className={styles.company}>Calimlim Dental Clinic</a>
-      </Link>
+      <Link href={'#'} passHref><a className={styles.company}>Calimlim Dental Clinic</a></Link>
       <ul className={navActive}>
         <li  onClick={navToggle} className={styles.nav_home_li}>
-            <Link  href={'/cdcs'} passHref>
-              <a className={styles.nav_home_a}>Home</a></Link>
+            <Link className={styles.nav_home_a} href={'/calimlim'}>Home</Link>
         </li>
         <li onClick={navToggle}  className={styles.nav_home_li}>
-          <Link href={'#'} passHref>
-            <a className={styles.nav_home_a}>Services</a></Link>
+          <Link className={styles.nav_home_a} href={'#'}>Services</Link>
         </li>
         <li onClick={navToggle}  className={styles.nav_home_li}>
-          <Link href={'#'} passHref>
-            <a className={styles.nav_home_a}>About</a></Link>
+          <Link className={styles.nav_home_a} href={'#'}>About</Link>
         </li>
         <li onClick={navToggle}  className={styles.nav_home_li}>
-          <Link href={'/cdcs/login'} passHref>
-            <a className={styles.nav_home_a}>Login/Register</a></Link>
+          <Link className={styles.nav_home_a} href={'/calimlim/login'}>Login/Register</Link>
         </li>
       </ul>
       <div onClick={navToggle} className={toggleIcon}>
