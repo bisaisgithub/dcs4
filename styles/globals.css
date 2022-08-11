@@ -405,19 +405,12 @@ body {
 input[type="text"] {
   padding: 0 0 0 5px;
 }
-.display-flex {
+/* .display-flex {
   display: flex;
   justify-content: space-between;
-}
-.display-flex-center {
-  display: flex;
-  justify-content: center;
-}
-.display-flex-center-column {
-  display: flex;
-  justify-content: center;
-  flex-direction: column;
-}
+} */
+
+
 .flex-end{
   display: flex;
   justify-content: flex-end;
@@ -774,13 +767,7 @@ input:focus {
   border-radius: 5px;
   background: linear-gradient(135deg, #71b7e6, #9b59b6);
 }
-.text_center_margin0 {
-  text-align: center;
-  margin: 0;
-}
-.display-none {
-  display: none;
-}
+
 .forgot_password {
   font-size: 12px;
   margin-top: 0px;

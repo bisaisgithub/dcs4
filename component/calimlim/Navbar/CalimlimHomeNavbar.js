@@ -1,8 +1,8 @@
 import Link from "next/link";
 import {useState} from 'react';
-import styles from '../../styles/NavbarHome.module.css';
+import styles from '../../../styles/NavbarHome.module.css';
 
-const CalimlimHomeNavbar = () => {
+const CalimlimHomeNavbar = ({setLoginRegisterOpen}) => {
   const [navActive, setNavActive] = useState(styles.nav_home_menu);
   const [toggleIcon, setToggleIcon] = useState(`${styles.nav_home_toggler}`);
   const navToggle = ()=>{
@@ -29,7 +29,7 @@ const CalimlimHomeNavbar = () => {
           <Link className={styles.nav_home_a} href={'#'}>About</Link>
         </li>
         <li onClick={navToggle}  className={styles.nav_home_li}>
-          <Link className={styles.nav_home_a} href={'/calimlim/login'}>Login/Register</Link>
+          <p className={styles.nav_home_a} onClick={()=>{setLoginRegisterOpen(p=>true)}} >Login/Register</p>
         </li>
       </ul>
       <div onClick={navToggle} className={toggleIcon}>

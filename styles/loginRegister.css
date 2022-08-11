@@ -1,0 +1,10 @@
+.login-register-cancel-button{
+  padding: 8px;
+  background: #e38282;
+  border: none;
+  border-radius: 5px;
+  color: white;
+  font-size: 14px;
+  font-weight: 600;
+  max-height: 40px;
+}

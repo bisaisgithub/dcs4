@@ -23,12 +23,20 @@ const UsersCDCSSchema = new mongoose.Schema(
     type: String,
     dob: Date,
     allergen: String,
-    created_by: {
-      type: mongoose.Schema.Types.ObjectId, ref: 'UsersCDCS'
-    },
     mobile: String,
     gender: String,
     status: String,
+    history: [
+      {
+        _id: false,
+        created_updated_using: String,
+        created_updated_by: {
+          type: mongoose.Schema.Types.ObjectId, ref: 'UsersCDCS5'
+        },
+        field_updated: String,
+        date_updated: Date
+      }
+    ]
   },
   { timestamps: true }
 );

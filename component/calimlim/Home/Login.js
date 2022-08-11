@@ -1,7 +1,7 @@
 import axios from "axios";
 import { useState } from "react";
 
-const Login = ({setLoginRegister}) => {
+const Login = ({setLoginRegister, setLoginRegisterOpen}) => {
   const [email, setEmail] = useState("");
   const [password, setPassword] = useState("");
   const [disabled, setDisabled] = useState(false);
@@ -33,8 +33,14 @@ const Login = ({setLoginRegister}) => {
     <form className="form-container-login" onSubmit={login}>
         <div className="form-body-login">
           <div className="form-title-container">
-            <div className='form-title-text'>
+            {/* <div className='form-title-text'>
               Login
+            </div> */}
+            <div className="display-flex">
+              <div className='form-title-text'>
+                Login
+              </div>
+              <button className="login-register-cancel-button" onClick={()=>setLoginRegisterOpen(p=>false)}>Cancel</button>
             </div>
           </div>
             <div className="form-body-input-box">
@@ -66,6 +72,7 @@ const Login = ({setLoginRegister}) => {
               onClick={()=>{
                 setLoginRegister({login: false, register: true})
               }}> Here</span></p>
+              {/* <button className="login-register-cancel-button" onClick={()=>setLoginRegisterOpen(p=>false)}>Cancel</button> */}
         </div>
       </form>
    );

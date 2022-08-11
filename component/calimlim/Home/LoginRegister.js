@@ -2,7 +2,7 @@ import {useState} from 'react';
 import Login from "./Login";
 import Register from "./Register";
 
-const LoginRegister = () => {
+const LoginRegister = ({setLoginRegisterOpen}) => {
   // const router = useRouter();
   const [loginRegister, setLoginRegister] = useState({login: true, register: false})
 
@@ -10,12 +10,12 @@ const LoginRegister = () => {
     <div className='details-details-container'>
       {
         loginRegister.login? (
-          <Login setLoginRegister={setLoginRegister}/>
+          <Login setLoginRegister={setLoginRegister} setLoginRegisterOpen={setLoginRegisterOpen}/>
         ):''
       }
       {
         loginRegister.register? (
-          <Register setLoginRegister={setLoginRegister} />
+          <Register setLoginRegister={setLoginRegister} setLoginRegisterOpen={setLoginRegisterOpen}/>
         ):''
       }
     </div>
